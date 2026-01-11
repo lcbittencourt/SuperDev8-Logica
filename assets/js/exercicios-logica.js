@@ -229,3 +229,6 @@ function exercicio09(){
     );
 }
 
+function exercicio10(){
+    
+}
