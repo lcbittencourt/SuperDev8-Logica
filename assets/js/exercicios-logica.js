@@ -41,7 +41,7 @@ function exercicio04() {
     let valorFinal = "";
     if (clientePremium === true) {
         valorFinal = valorTotal - (valorTotal * 0.10);
-    }else if(clientePremium === false) {
+    } else if (clientePremium === false) {
         valorFinal = valorTotal;
     }
 
@@ -115,9 +115,9 @@ function exercicio06() {
     let valorSeguro = 150.00;
 
     let valorFinalParcela = "";
-    if(seguroCarro === true){
+    if (seguroCarro === true) {
         valorFinalParcela = varlorParcela + valorSeguro;
-    }else if(seguroCarro === false){
+    } else if (seguroCarro === false) {
         valorFinalParcela = varlorParcela;
     }
 
@@ -133,13 +133,13 @@ function exercicio06() {
     );
 }
 
-function exercicio07(){
-// ✅Solicitar o nome do jogo
-// ✅Solicitar a quantidade de horas jogadas por dia (número)
-// ✅Solicitar a quantidade de dias jogados na semana (número)
-// ✅Calcular o total de horas jogadas na semana (horas por dia * dias)
-// ✅Solicitar se o jogo é online (boolean - confirm)
-// ✅Apresentar os dados do jogo e o total de horas semanais
+function exercicio07() {
+    // ✅Solicitar o nome do jogo
+    // ✅Solicitar a quantidade de horas jogadas por dia (número)
+    // ✅Solicitar a quantidade de dias jogados na semana (número)
+    // ✅Calcular o total de horas jogadas na semana (horas por dia * dias)
+    // ✅Solicitar se o jogo é online (boolean - confirm)
+    // ✅Apresentar os dados do jogo e o total de horas semanais
 
     const nomeJogo = prompt("Digite o nome do jogo");
     let horasJogadasDia = parseInt(prompt("Digite a quantidade de horas jogadas por dia"));
@@ -158,14 +158,14 @@ function exercicio07(){
     );
 }
 
-function exercicio08(){
-// ✅Solicitar o nome do restaurante
-// ✅Solicitar o valor da conta (número com casas decimais)
-// ✅Solicitar a quantidade de pessoas na mesa (número inteiro)
-// ✅Calcular quanto cada pessoa deve pagar (valor da conta / quantidade de pessoas)
-// ✅Solicitar se será incluída taxa de serviço (boolean - confirm)
-// ✅Se for incluir taxa de serviço, adicionar 10% ao valor da conta antes de dividir
-// ✅Apresentar o valor final da conta e o valor por pessoa
+function exercicio08() {
+    // ✅Solicitar o nome do restaurante
+    // ✅Solicitar o valor da conta (número com casas decimais)
+    // ✅Solicitar a quantidade de pessoas na mesa (número inteiro)
+    // ✅Calcular quanto cada pessoa deve pagar (valor da conta / quantidade de pessoas)
+    // ✅Solicitar se será incluída taxa de serviço (boolean - confirm)
+    // ✅Se for incluir taxa de serviço, adicionar 10% ao valor da conta antes de dividir
+    // ✅Apresentar o valor final da conta e o valor por pessoa
 
     const nomeRestaurante = prompt("Digite o nome do restaurante");
     let valorConta = parseFloat(prompt("Digite o valor da conta"));
@@ -174,9 +174,9 @@ function exercicio08(){
     let taxaServico = confirm("Incluir taxa de serviço? (10%)");
 
     let valorFinal = "";
-    if (taxaServico === true){
+    if (taxaServico === true) {
         valorFinal = valorConta + (valorConta * 0.10);
-    }else if (taxaServico === false) {
+    } else if (taxaServico === false) {
         valorFinal = valorConta;
     }
 
@@ -188,21 +188,21 @@ function exercicio08(){
         "\nQuantidade de pessoas na mesa: " + quantidadePessoasMesa +
         "\nTaxa de serviço?: " + (taxaServico ? "Sim (10%)" : "Não") +
         "\nValor final: R$" + valorFinal +
-        "\nValor por pessoa: R$" + valorPessoa        
+        "\nValor por pessoa: R$" + valorPessoa
     );
 
 }
 
-function exercicio09(){
-// Solicitar o nome do funcionário
-// Solicitar o salário base (número)
-// Solicitar o valor das horas extras no mês (número)
-// Solicitar o valor dos descontos (número)
-// Calcular o salário final (salário base + horas extras - descontos)
-// Verificar se o salário final é maior que 3000
-// Se maior que 3000, informar que o funcionário paga imposto alto
-// Se menor ou igual a 3000, informar que o funcionário paga imposto padrão
-// Apresentar todos os dados e o salário final
+function exercicio09() {
+    // ✅Solicitar o nome do funcionário
+    // ✅Solicitar o salário base (número)
+    // ✅Solicitar o valor das horas extras no mês (número)
+    // ✅Solicitar o valor dos descontos (número)
+    // ✅Calcular o salário final (salário base + horas extras - descontos)
+    // ✅Verificar se o salário final é maior que 3000
+    // ✅Se maior que 3000, informar que o funcionário paga imposto alto
+    // ✅Se menor ou igual a 3000, informar que o funcionário paga imposto padrão
+    // ✅Apresentar todos os dados e o salário final
 
     const nomeFuncionario = prompt("Digite o nome do funcionário");
 
@@ -229,6 +229,34 @@ function exercicio09(){
     );
 }
 
-function exercicio10(){
-    
+function exercicio10() {
+    // ✅Solicitar o nome do cliente
+    // ✅Solicitar o saldo atual da conta (número)
+    // ✅Solicitar o valor de um depósito (número)
+    // ✅Atualizar o saldo com o depósito
+    // ✅Solicitar o valor de um saque (número)
+    // ✅Verificar se o saque é menor ou igual ao saldo
+    // ✅Se for possível, atualizar o saldo subtraindo o saque
+    // ✅Se não for possível, não alterar o saldo e avisar que saldo é insuficiente
+    // ✅Apresentar o nome do cliente e o saldo final da conta
+
+    const nomeCliente = prompt("Digite o nome do cliente");
+
+    let saldo = parseFloat(prompt("Digite o saldo atual da conta"));
+
+    let deposito = parseFloat(prompt("Digite o valor do depósito"));
+    saldo = saldo + deposito;
+
+    let saque = parseFloat(prompt("Digite o valor do saque"));
+
+    if (saque <= saldo) {
+        saldo = saldo - saque;
+    } else {
+        alert("Saldo insuficiente para realizar o saque");
+    }
+
+    alert(
+        "Cliente: " + nomeCliente +
+        "\nSaldo final da conta: R$ " + saldo.toFixed(2)
+    );
 }
