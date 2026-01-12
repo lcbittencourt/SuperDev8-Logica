@@ -235,43 +235,316 @@ function exercicio10() {
 }
 
 function exercicio11() {
+    // Solicitar 4 notas de um aluno utilizando enquanto
+    // Calcular a média das notas
+    // Apresentar a média
+    // Se a média for maior ou igual a 7 apresentar Aprovado
+    // Senão apresentar Reprovado
+
+    let situacaoAluno = 0;
+    let soma = 0;
+    let media = 0;
+    let indice = 0;
+
+    while (indice < 4) {
+        let nota = parseFloat(prompt("Digite a nota do aluno"));
+
+        soma = soma + nota;
+
+        media = soma / 4;
+
+        if (media >= 7) {
+            situacaoAluno = "Aprovado"
+        } else {
+            situacaoAluno = "Reprovado"
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Média do aluno: " + media +
+        "\nSituação do aluno: " + situacaoAluno
+    );
 
 }
 
-function exercicio012() {
+function exercicio12() {
+    // Solicitar o valor de 5 produtos utilizando enquanto
+    // Calcular o total da compra
+    // Se o total for maior que 200 aplicar 10% de desconto
+    // Apresentar o valor total sem desconto
+    // Apresentar o valor final com desconto (se houver)
 
+    let desconto = 0;
+    let totalCompra = 0;
+    let indice = 0;
+
+    while (indice < 5) {
+        let valorProduto = parseFloat(prompt("Digite o valor do produto"));
+
+        totalCompra = totalCompra + valorProduto;
+
+        indice = indice + 1;
+    }
+
+    let valorFinal = totalCompra;
+
+    if (totalCompra > 200) {
+        desconto = totalCompra * 0.10;
+        valorFinal = totalCompra - desconto;
+    }
+
+    alert(
+        "Total da compra: R$" + totalCompra.toFixed(2) +
+        "\nDesconto aplicado: R$" + desconto.toFixed(2) +
+        "\nValor final: R$" + valorFinal.toFixed(2)
+    );
 }
 
 function exercicio13() {
+    // Solicitar 6 idades utilizando enquanto
+    // Calcular a média das idades
+    // Apresentar a média das idades
+    // Se a média for maior ou igual a 18 apresentar Maior de idade
+    // Senão apresentar Menor de idade
 
+    let situacao = "";
+    let somaIdades = 0;
+    let indice = 0;
+
+    while (indice < 6) {
+        let idade = parseInt(prompt("Digite a idade"));
+
+        somaIdades = somaIdades + idade;
+
+        indice = indice + 1;
+    }
+
+    let mediaIdades = somaIdades / 6;
+
+    if (mediaIdades >= 18) {
+        situacao = "Maior de idade";
+    } else {
+        situacao = "Menor de idade";
+    }
+
+    alert(
+        "Média das idades: " + mediaIdades +
+        "\nSituação: " + situacao
+    );
 }
 
 function exercicio14() {
+    // Solicitar 5 salários utilizando enquanto
+    // Calcular o maior salário informado
+    // Calcular o menor salário informado
+    // Calcular a média dos salários
+    // Se a média for maior que 3000 apresentar mensagem Salários acima da média
+    // Senão apresentar mensagem Salários dentro da média
 
+    let maiorSalario = 0;
+    let menorSalario = 999999;
+    let somaSalarios = 0;
+    let indice = 0;
+
+    while (indice < 5) {
+        let salario = parseFloat(prompt("Digite o salário"));
+
+        somaSalarios = somaSalarios + salario;
+
+        if (salario > maiorSalario) {
+            maiorSalario = salario;
+        } 
+        if (salario < menorSalario) {
+            menorSalario = salario;
+        }
+
+        indice = indice + 1;
+    }
+
+    let mediaSalarios = somaSalarios / 5;
+
+    let informacao = "";
+    if (mediaSalarios > 3000) {
+        informacao = "Salários acima da média";
+    } else {
+        informacao = "Salários dentro da média";
+    }
+
+    alert(
+        "Maior salário: R$" + maiorSalario.toFixed(2) +
+        "\nMenor salário: R$" + menorSalario.toFixed(2) +
+        "\nMédia dos salários: R$" + mediaSalarios.toFixed(2) +
+        "\nSituação: " + informacao
+    );
+
+    /* está dando erro na apresentação do menor valor, não consegui resolver */
 }
 
 function exercicio15() {
+    // Solicitar 4 valores de contas (água, luz, internet, aluguel) utilizando enquanto
+    // Calcular o total das contas
+    // Solicitar a renda mensal do usuário
+    // Se o total das contas for maior que 50% da renda apresentar mensagem Orçamento comprometido
+    // Senão apresentar mensagem Orçamento saudável
+    // Apresentar o total das contas e o percentual que representa da renda
+
+    let totalContas = 0;
+    let indice = 0;
+
+    while (indice < 4) {
+        let varlorConta = parseFloat(prompt("Digite o valor da conta(luz, água, internet, aluguel"));
+
+        totalContas = totalContas + varlorConta;
+
+        indice = indice + 1;
+    }
+
+    let rendaMensal = parseFloat(prompt("Digite sua renda"));
+
+    let orcamento = (totalContas / rendaMensal) * 100;
+
+    let situacao = "";
+    if (orcamento > 50) {
+        situacao = "Orçamento comprometido";
+    } else {
+        situacao = "Orçamento saudável";
+    }
+
+    alert(
+        "Total das contas: R$" + totalContas.toFixed(2) +
+        "\nRenda mensal: R$" + rendaMensal.toFixed(2) +
+        "\nPercentual comprometido: " + orcamento.toFixed(2) +
+        "\nSituação: " + situacao
+    );
 
 }
 
 function exercicio16() {
+    // Solicitar a altura de 5 pessoas
+    // Descobrir e armazenar a maior altura utilizando while
+    // Apresentar a maior altura informada
 
+    let maiorAltura = 0;
+    let indice = 0;
+
+    while (indice < 5) {
+        let altura = parseFloat(prompt("Digite a altura em cm (ex.: 175)"));
+
+        if (altura > maiorAltura) {
+            maiorAltura = altura;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert("Maior altura: " + maiorAltura.toFixed(2) + "cm");
 }
 
 function exercicio17() {
+    // Solicitar o peso de 4 pessoas
+    // Descobrir e armazenar o menor peso utilizando while
+    // Apresentar o menor peso informado
 
+    let menorPeso = 999999;
+    let indice = 0;
+
+    while(indice < 4){
+        let peso = parseFloat(prompt("Digite o peso em kg (ex.: 60)"));
+
+        if (peso < menorPeso){
+            menorPeso = peso;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert("Menor peso: " + menorPeso + "kg");
 }
 
 function exercicio18() {
+// Solicitar o nome e a idade de 5 pessoas
+// Descobrir quem possui a maior idade utilizando while
+// Apresentar o nome da pessoa e a idade dela
 
+let maiorIdade = 0;
+let nomeMaiorIdade = "";
+let indice = 0;
+
+while(indice < 5){
+    let nome = prompt("Digite o nome da pessoa");
+    let idade = parseInt(prompt("Digite a idade"));
+
+    if(idade > maiorIdade){
+        maiorIdade = idade;
+        nomeMaiorIdade = nome;
+    }
+
+    indice = indice + 1;
+}
+
+alert(
+    "PESSOA COM MAIOR IDADE:" +
+    "\nNome: " + nomeMaiorIdade +
+    "\nIdade: " + maiorIdade
+);
 }
 
 function exercicio19() {
+// Solicitar o preço de 6 produtos
+// Descobrir o maior preço utilizando while
+// Descobrir o menor preço utilizando while
+// Apresentar o maior e o menor preço informados
 
+let maiorPreco = 0;
+let menorPreco = 999999;
+let indice = 0;
+
+while(indice < 6){
+    let preco = parseFloat(prompt("Digite o preço do produto"));
+    
+    if(preco > maiorPreco){
+        maiorPreco = preco;
+    }
+    if(preco < menorPreco){
+        menorPreco = preco;
+    }
+indice = indice + 1;
+}
+
+alert(
+    "Maior preço: R$" + maiorPreco.toFixed(2) +
+    "\nMenor preço: R$" + menorPreco.toFixed(2)
+);
 }
 
 function exercicio20() {
+// Solicitar o nome e o valor do salário de 4 colaboradores
+// Descobrir qual colaborador tem o maior salário utilizando while
+// Apresentar o nome do colaborador e o salário dele
 
+let maiorSalario = 0;
+let nomeMaiorSalario = "";
+let indice = 0;
+
+while(indice < 4){
+    let nome = prompt("Digite o nome do colaborador");
+    let salario = parseFloat(prompt("Digite o salário do colaborador"));
+
+    if(salario > maiorSalario){
+        maiorSalario = salario;
+        nomeMaiorSalario = nome;
+    }
+
+indice = indice + 1;
+}
+
+alert(
+    "COLABORADOR COM MAIOR SALÁRIO:" +
+    "\nNome: " + nomeMaiorSalario +
+    "\nSalário: R$" + maiorSalario
+);
 }
 
 function exercicio21() {
