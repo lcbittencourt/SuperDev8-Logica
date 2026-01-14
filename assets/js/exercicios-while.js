@@ -548,67 +548,522 @@ alert(
 }
 
 function exercicio21() {
+    // Solicitar a temperatura de 7 dias
+    // Descobrir a maior temperatura utilizando while
+    // Descobrir a menor temperatura utilizando while
+    // Apresentar a maior e a menor temperatura informadas
 
+    let maiorTemperatura = -999999;
+    let menorTemperatura = 999999;
+    let indice = 0;
+
+    while (indice < 7) {
+        let temperatura = parseFloat(prompt("Digite a temperatura do dia " + (indice + 1)));
+
+        if (temperatura > maiorTemperatura) {
+            maiorTemperatura = temperatura;
+        }
+
+        if (temperatura < menorTemperatura) {
+            menorTemperatura = temperatura;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Maior temperatura: " + maiorTemperatura.toFixed(2) + "°C" +
+        "\nMenor temperatura: " + menorTemperatura.toFixed(2) + "°C"
+    );
 }
 
 function exercicio22() {
+    // Solicitar o nome e o preço de 5 produtos
+    // Descobrir qual produto tem o menor preço utilizando while
+    // Apresentar o nome do produto e o preço dele
 
+    let menorPreco = 999999;
+    let nomeMenorPreco = "";
+    let indice = 0;
+
+    while (indice < 5) {
+        let nome = prompt("Digite o nome do produto");
+        let preco = parseFloat(prompt("Digite o preço do produto"));
+
+        if (preco < menorPreco) {
+            menorPreco = preco;
+            nomeMenorPreco = nome;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Produto com menor preço:" +
+        "\nNome: " + nomeMenorPreco +
+        "\nPreço: R$" + menorPreco.toFixed(2)
+    );
 }
-
 function exercicio23() {
+    // Solicitar a idade de 8 pessoas
+    // - Contar quantas são crianças (idade < 12)
+    // - Contar quantas são adolescentes (12 a 17)
+    // - Contar quantas são adultos (18 a 59)
+    // - Contar quantas são idosos (60 ou mais)
+    // - Apresentar a quantidade em cada categoria
 
+    let criancas = 0;
+    let adolescentes = 0;
+    let adultos = 0;
+    let idosos = 0;
+    let indice = 0;
+
+    while (indice < 8) {
+        let idade = parseInt(prompt("Digite a idade da pessoa"));
+
+        if (idade < 12) {
+            criancas = criancas + 1;
+        } else if (idade >= 12 && idade <= 17) {
+            adolescentes = adolescentes + 1;
+        } else if (idade >= 18 && idade <= 59) {
+            adultos = adultos + 1;
+        } else {
+            idosos = idosos + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Crianças: " + criancas +
+        "\nAdolescentes: " + adolescentes +
+        "\nAdultos: " + adultos +
+        "\nIdosos: " + idosos
+    );
 }
 
 function exercicio24() {
+    // Solicitar a nota de 10 alunos
+    // - Contar quantos alunos estão Reprovados (nota < 5)
+    // - Contar quantos alunos estão em Recuperação (nota >= 5 e < 7)
+    // - Contar quantos alunos estão Aprovados (nota >= 7)
+    // - Apresentar a quantidade de Reprovados, Recuperação e Aprovados
 
+    let reprovados = 0;
+    let recuperacao = 0;
+    let aprovados = 0;
+    let indice = 0;
+
+    while (indice < 10) {
+        let nota = parseFloat(prompt("Digite a nota do aluno"));
+
+        if (nota < 5) {
+            reprovados = reprovados + 1;
+        } else if (nota >= 5 && nota < 7) {
+            recuperacao = recuperacao + 1;
+        } else {
+            aprovados = aprovados + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Reprovados: " + reprovados +
+        "\nRecuperação: " + recuperacao +
+        "\nAprovados: " + aprovados
+    );
 }
 
 function exercicio25() {
+    // Solicitar o salário de 7 colaboradores
+    // - Contar quantos ganham até 2000
+    // - Contar quantos ganham entre 2001 e 5000
+    // - Contar quantos ganham acima de 5000
+    // - Apresentar a quantidade de colaboradores em cada faixa salarial
 
+    let faixa1 = 0;
+    let faixa2 = 0;
+    let faixa3 = 0;
+    let indice = 0;
+
+    while (indice < 7) {
+        let salario = parseFloat(prompt("Digite o salário do colaborador"));
+
+        if (salario <= 2000) {
+            faixa1 = faixa1 + 1;
+        } else if (salario >= 2001 && salario <= 5000) {
+            faixa2 = faixa2 + 1;
+        } else {
+            faixa3 = faixa3 + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Colaboradores que ganham até R$2000: " + faixa1 +
+        "\nColaboradores que ganham entre R$2001 e R$5000: " + faixa2 +
+        "\nColaboradores que ganham acima de R$5000: " + faixa3
+    );
 }
 
 function exercicio26() {
+    // Solicitar a temperatura de 6 dias
+    // - Contar quantos dias foram Frios (temperatura < 15)
+    // - Contar quantos dias foram Agradáveis (temperatura entre 15 e 25)
+    // - Contar quantos dias foram Quentes (temperatura > 25)
+    // - Apresentar a quantidade de dias Frios, Agradáveis e Quentes
 
+    let frios = 0;
+    let agradaveis = 0;
+    let quentes = 0;
+    let indice = 0;
+
+    while (indice < 6) {
+        let temperatura = parseFloat(prompt("Digite a temperatura do dia"));
+
+        if (temperatura < 15) {
+            frios = frios + 1;
+        } else if (temperatura >= 15 && temperatura <= 25) {
+            agradaveis = agradaveis + 1;
+        } else {
+            quentes = quentes + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Dias Frios: " + frios +
+        "\nDias Agradáveis: " + agradaveis +
+        "\nDias Quentes: " + quentes
+    );
 }
 
 function exercicio27() {
+    // Solicitar a avaliação de 10 clientes (1 a 5)
+    // - Contar quantas avaliações foram Ruim (1 ou 2)
+    // - Contar quantas avaliações foram Regular (3)
+    // - Contar quantas avaliações foram Bom (4 ou 5)
+    // - Apresentar a quantidade de respostas Ruim, Regular e Bom
 
+    let ruim = 0;
+    let regular = 0;
+    let bom = 0;
+    let indice = 0;
+
+    while (indice < 10) {
+        let avaliacao = parseInt(prompt("Digite a avaliação do cliente (1 a 5)"));
+
+        if (avaliacao === 1 || avaliacao === 2) {
+            ruim = ruim + 1;
+        } else if (avaliacao === 3) {
+            regular = regular + 1;
+        } else if (avaliacao === 4 || avaliacao === 5) {
+            bom = bom + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Avaliações Ruim: " + ruim +
+        "\nAvaliações Regular: " + regular +
+        "\nAvaliações Bom: " + bom
+    );
 }
 
 function exercicio28() {
+    // Solicitar 8 números inteiros
+    // - Contar quantos números são negativos
+    // - Contar quantos números são iguais a zero
+    // - Contar quantos números são positivos
+    // - Apresentar a quantidade de números negativos, iguais a zero e positivos
 
+    let negativos = 0;
+    let zeros = 0;
+    let positivos = 0;
+    let indice = 0;
+
+    while (indice < 8) {
+        let numero = parseInt(prompt("Digite um número inteiro"));
+
+        if (numero < 0) {
+            negativos = negativos + 1;
+        } else if (numero === 0) {
+            zeros = zeros + 1;
+        } else {
+            positivos = positivos + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Números Negativos: " + negativos +
+        "\nNúmeros Iguais a Zero: " + zeros +
+        "\nNúmeros Positivos: " + positivos
+    );
 }
 
 function exercicio29() {
+    // Solicitar o peso de 5 encomendas
+    // - Contar quantas são Leves (peso < 2 kg)
+    // - Contar quantas são Médias (peso entre 2 e 10 kg)
+    // - Contar quantas são Pesadas (peso > 10 kg)
+    // - Apresentar a quantidade de encomendas Leves, Médias e Pesadas
 
+    let leves = 0;
+    let medias = 0;
+    let pesadas = 0;
+    let indice = 0;
+
+    while (indice < 5) {
+        let peso = parseFloat(prompt("Digite o peso da encomenda em kg"));
+
+        if (peso < 2) {
+            leves = leves + 1;
+        } else if (peso >= 2 && peso <= 10) {
+            medias = medias + 1;
+        } else {
+            pesadas = pesadas + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Encomendas Leves: " + leves +
+        "\nEncomendas Médias: " + medias +
+        "\nEncomendas Pesadas: " + pesadas
+    );
 }
 
 function exercicio30() {
+    // Solicitar a quantidade de pelúcias da Disney que deseja cadastrar
+    // Para cada pelúcia, solicitar o personagem [MICKEY/MINNIE/DONALD]
+    // Contar quantas pelúcias são do Mickey
+    // Contar quantas pelúcias são da Minnie
+    // Contar quantas pelúcias são do Donald
+    // Apresentar o resumo das pelúcias cadastradas por personagem
 
+    let quantidadePelucias = parseInt(prompt("Digite a quantidade de pelúcias que deseja cadastrar"));
+    let mickey = 0;
+    let minnie = 0;
+    let donald = 0;
+    let indice = 0;
+
+    while (indice < quantidadePelucias) {
+        let personagem = prompt("Digite o personagem da pelúcia (MICKEY/MINNIE/DONALD)");
+
+        if (personagem === "MICKEY") {
+            mickey = mickey + 1;
+        } else if (personagem === "MINNIE") {
+            minnie = minnie + 1;
+        } else if (personagem === "DONALD") {
+            donald = donald + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Resumo das pelúcias cadastradas:" +
+        "\nMickey: " + mickey +
+        "\nMinnie: " + minnie +
+        "\nDonald: " + donald
+    );
 }
 
 function exercicio31() {
+    // Solicitar a quantidade de clientes que irão responder a pesquisa
+    // Para cada cliente, solicitar a forma de pagamento utilizada [CRÉDITO/DÉBITO/DINHEIRO]
+    // Contar quantos pagaram no crédito
+    // Contar quantos pagaram no débito
+    // Contar quantos pagaram em dinheiro
+    // Apresentar o total de clientes em cada forma de pagamento
 
+    let quantidadeClientes = parseInt(prompt("Digite a quantidade de clientes que irão responder a pesquisa"));
+    let credito = 0;
+    let debito = 0;
+    let dinheiro = 0;
+    let indice = 0;
+
+    while (indice < quantidadeClientes) {
+        let formaPagamento = prompt("Digite a forma de pagamento utilizada (CRÉDITO/DÉBITO/DINHEIRO)");
+
+        if (formaPagamento === "CRÉDITO") {
+            credito = credito + 1;
+        } else if (formaPagamento === "DÉBITO") {
+            debito = debito + 1;
+        } else if (formaPagamento === "DINHEIRO") {
+            dinheiro = dinheiro + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Total de clientes em cada forma de pagamento:" +
+        "\nCrédito: " + credito +
+        "\nDébito: " + debito +
+        "\nDinheiro: " + dinheiro
+    );
 }
 
 function exercicio32() {
+    // Solicitar a quantidade de ingressos vendidos
+    // Para cada ingresso, solicitar o tipo [INTEIRA/MEIA/CORTESIA]
+    // Contar quantos ingressos são INTEIRA
+    // Contar quantos ingressos são MEIA
+    // Contar quantos ingressos são CORTESIA
+    // Apresentar o total de ingressos por tipo
 
+    let quantidadeIngressos = parseInt(prompt("Digite a quantidade de ingressos vendidos"));
+    let inteira = 0;
+    let meia = 0;
+    let cortesia = 0;
+    let indice = 0;
+
+    while (indice < quantidadeIngressos) {
+        let tipoIngresso = prompt("Digite o tipo de ingresso (INTEIRA/MEIA/CORTESIA)");
+
+        if (tipoIngresso === "INTEIRA") {
+            inteira = inteira + 1;
+        } else if (tipoIngresso === "MEIA") {
+            meia = meia + 1;
+        } else if (tipoIngresso === "CORTESIA") {
+            cortesia = cortesia + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Total de ingressos por tipo:" +
+        "\nInteira: " + inteira +
+        "\nMeia: " + meia +
+        "\nCortesia: " + cortesia
+    );
 }
 
 function exercicio33() {
+    // Solicitar a quantidade de lanches vendidos em um dia
+    // Para cada lanche, solicitar o tipo [HAMBURGUER/PIZZA/HOTDOG]
+    // Contar quantos pedidos foram de hambúrguer
+    // Contar quantos pedidos foram de pizza
+    // Contar quantos pedidos foram de hotdog
+    // Apresentar a quantidade de pedidos por tipo de lanche
 
+    let quantidadeLanches = parseInt(prompt("Digite a quantidade de lanches vendidos em um dia"));
+    let hamburguer = 0;
+    let pizza = 0;
+    let hotdog = 0;
+    let indice = 0;
+
+    while (indice < quantidadeLanches) {
+        let tipoLanche = prompt("Digite o tipo de lanche (HAMBURGUER/PIZZA/HOTDOG)");
+
+        if (tipoLanche === "HAMBURGUER") {
+            hamburguer = hamburguer + 1;
+        } else if (tipoLanche === "PIZZA") {
+            pizza = pizza + 1;
+        } else if (tipoLanche === "HOTDOG") {
+            hotdog = hotdog + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Quantidade de pedidos por tipo de lanche:" +
+        "\nHambúrguer: " + hamburguer +
+        "\nPizza: " + pizza +
+        "\nHotdog: " + hotdog
+    );
 }
 
 function exercicio34() {
+    // Solicitar a quantidade de livros que deseja cadastrar
+    // Para cada livro, solicitar a categoria [FICÇÃO/ESTUDO/INFANTIL]
+    // Contar quantos livros são de Ficção
+    // Contar quantos livros são de Estudo
+    // Contar quantos livros são Infantis
+    // Apresentar a quantidade de livros em cada categoria
 
+    let quantidadeLivros = parseInt(prompt("Digite a quantidade de livros que deseja cadastrar"));
+    let ficcao = 0;
+    let estudo = 0;
+    let infantil = 0;
+    let indice = 0;
+
+    while (indice < quantidadeLivros) {
+        let categoriaLivro = prompt("Digite a categoria do livro (FICÇÃO/ESTUDO/INFANTIL)");
+
+        if (categoriaLivro === "FICÇÃO") {
+            ficcao = ficcao + 1;
+        } else if (categoriaLivro === "ESTUDO") {
+            estudo = estudo + 1;
+        } else if (categoriaLivro === "INFANTIL") {
+            infantil = infantil + 1;
+        }
+
+        indice = indice + 1;
+    }
+
+    alert(
+        "Quantidade de livros em cada categoria:" +
+        "\nFicção: " + ficcao +
+        "\nEstudo: " + estudo +
+        "\nInfantil: " + infantil
+    );
 }
 
 function exercicio35() {
+    // Solicitar o nome de personagens de anime até o usuário digitar sair
+    // Cada vez que um nome for digitado, exibir uma mensagem com o personagem cadastrado
+    // Ao digitar sair, encerrar o cadastro
+    // Apresentar a quantidade total de personagens cadastrados
 
+    let nomePersonagem = prompt("Digite o nome do personagem de anime (ou 'sair' para encerrar)");
+    let quantidadePersonagens = 0;
+
+    while (nomePersonagem !== "sair") {
+        alert("Personagem cadastrado: " + nomePersonagem);
+        quantidadePersonagens = quantidadePersonagens + 1;
+        nomePersonagem = prompt("Digite o nome do personagem de anime (ou 'sair' para encerrar)");
+    }
+
+    alert("Quantidade total de personagens cadastrados: " + quantidadePersonagens);
 }
 
 function exercicio36() {
+    // Solicitar o nome de jogos favoritos até o usuário digitar sair
+    // Contar quantos jogos foram cadastrados
+    // Contar quantos jogos são do gênero RPG (quando o usuário digitar "RPG" em uma pergunta de gênero)
+    // Ao final, apresentar a quantidade total de jogos e quantos são RPG
 
+    let nomeJogo = prompt("Digite o nome do jogo favorito (ou 'sair' para encerrar)");
+    let quantidadeJogos = 0;
+    let jogosRPG = 0;
+
+    while (nomeJogo !== "sair") {
+        quantidadeJogos = quantidadeJogos + 1;
+
+        let generoJogo = prompt("Digite o gênero do jogo (RPG/OUTRO)");
+
+        if (generoJogo === "RPG") {
+            jogosRPG = jogosRPG + 1;
+        }
+
+        nomeJogo = prompt("Digite o nome do jogo favorito (ou 'sair' para encerrar)");
+    }
+
+    alert(
+        "Quantidade total de jogos cadastrados: " + quantidadeJogos +
+        "\nQuantidade de jogos do gênero RPG: " + jogosRPG
+    );
 }
 
 function exercicio37() {
