@@ -606,12 +606,11 @@ function exercicio22() {
 }
 function exercicio23() {
     // Solicitar a idade de 8 pessoas
-    // - Contar quantas são crianças (idade < 12)
-    // - Contar quantas são adolescentes (12 a 17)
-    // - Contar quantas são adultos (18 a 59)
-    // - Contar quantas são idosos (60 ou mais)
-    // - Apresentar a quantidade em cada categoria
-
+    // Contar quantas são crianças (idade < 12)
+    // Contar quantas são adolescentes (12 a 17)
+    // Contar quantas são adultos (18 a 59)
+    // Contar quantas são idosos (60 ou mais)
+    // Apresentar a quantidade em cada categoria
     let criancas = 0;
     let adolescentes = 0;
     let adultos = 0;
@@ -644,10 +643,10 @@ function exercicio23() {
 
 function exercicio24() {
     // Solicitar a nota de 10 alunos
-    // - Contar quantos alunos estão Reprovados (nota < 5)
-    // - Contar quantos alunos estão em Recuperação (nota >= 5 e < 7)
-    // - Contar quantos alunos estão Aprovados (nota >= 7)
-    // - Apresentar a quantidade de Reprovados, Recuperação e Aprovados
+    // Contar quantos alunos estão Reprovados (nota < 5)
+    // Contar quantos alunos estão em Recuperação (nota >= 5 e < 7)
+    // Contar quantos alunos estão Aprovados (nota >= 7)
+    // Apresentar a quantidade de Reprovados, Recuperação e Aprovados
 
     let reprovados = 0;
     let recuperacao = 0;
@@ -677,10 +676,10 @@ function exercicio24() {
 
 function exercicio25() {
     // Solicitar o salário de 7 colaboradores
-    // - Contar quantos ganham até 2000
-    // - Contar quantos ganham entre 2001 e 5000
-    // - Contar quantos ganham acima de 5000
-    // - Apresentar a quantidade de colaboradores em cada faixa salarial
+    // Contar quantos ganham até 2000
+    // Contar quantos ganham entre 2001 e 5000
+    // Contar quantos ganham acima de 5000
+    // Apresentar a quantidade de colaboradores em cada faixa salarial
 
     let faixa1 = 0;
     let faixa2 = 0;
@@ -710,10 +709,10 @@ function exercicio25() {
 
 function exercicio26() {
     // Solicitar a temperatura de 6 dias
-    // - Contar quantos dias foram Frios (temperatura < 15)
-    // - Contar quantos dias foram Agradáveis (temperatura entre 15 e 25)
-    // - Contar quantos dias foram Quentes (temperatura > 25)
-    // - Apresentar a quantidade de dias Frios, Agradáveis e Quentes
+    // Contar quantos dias foram Frios (temperatura < 15)
+    // Contar quantos dias foram Agradáveis (temperatura entre 15 e 25)
+    // Contar quantos dias foram Quentes (temperatura > 25)
+    // Apresentar a quantidade de dias Frios, Agradáveis e Quentes
 
     let frios = 0;
     let agradaveis = 0;
@@ -743,10 +742,10 @@ function exercicio26() {
 
 function exercicio27() {
     // Solicitar a avaliação de 10 clientes (1 a 5)
-    // - Contar quantas avaliações foram Ruim (1 ou 2)
-    // - Contar quantas avaliações foram Regular (3)
-    // - Contar quantas avaliações foram Bom (4 ou 5)
-    // - Apresentar a quantidade de respostas Ruim, Regular e Bom
+    // Contar quantas avaliações foram Ruim (1 ou 2)
+    // Contar quantas avaliações foram Regular (3)
+    // Contar quantas avaliações foram Bom (4 ou 5)
+    // Apresentar a quantidade de respostas Ruim, Regular e Bom
 
     let ruim = 0;
     let regular = 0;
@@ -776,10 +775,10 @@ function exercicio27() {
 
 function exercicio28() {
     // Solicitar 8 números inteiros
-    // - Contar quantos números são negativos
-    // - Contar quantos números são iguais a zero
-    // - Contar quantos números são positivos
-    // - Apresentar a quantidade de números negativos, iguais a zero e positivos
+    // Contar quantos números são negativos
+    // Contar quantos números são iguais a zero
+    // Contar quantos números são positivos
+    // Apresentar a quantidade de números negativos, iguais a zero e positivos
 
     let negativos = 0;
     let zeros = 0;
@@ -809,10 +808,10 @@ function exercicio28() {
 
 function exercicio29() {
     // Solicitar o peso de 5 encomendas
-    // - Contar quantas são Leves (peso < 2 kg)
-    // - Contar quantas são Médias (peso entre 2 e 10 kg)
-    // - Contar quantas são Pesadas (peso > 10 kg)
-    // - Apresentar a quantidade de encomendas Leves, Médias e Pesadas
+    // Contar quantas são Leves (peso < 2 kg)
+    // Contar quantas são Médias (peso entre 2 e 10 kg)
+    // Contar quantas são Pesadas (peso > 10 kg)
+    // Apresentar a quantidade de encomendas Leves, Médias e Pesadas
 
     let leves = 0;
     let medias = 0;
@@ -1067,57 +1066,687 @@ function exercicio36() {
 }
 
 function exercicio37() {
+    // Solicitar o nome de heróis da Marvel até o usuário digitar sair
+    // Para cada herói, solicitar também o nível de poder [BAIXO/MEDIO/ALTO]
+    // Contar quantos heróis têm poder BAIXO, MEDIO e ALTO
+    // Ao final, apresentar a quantidade em cada nível de poder
 
+    let nomeHeroi = prompt("Digite o nome do herói da Marvel (ou 'sair' para encerrar)");
+    let quantidadeHerois = 0;
+    let poderBaixo = 0;
+    let poderMedio = 0;
+    let poderAlto = 0;
+
+    while (nomeHeroi !== "sair") {
+        quantidadeHerois = quantidadeHerois + 1;
+
+        let nivelPoder = prompt("Digite o nível de poder do herói (BAIXO/MEDIO/ALTO)");
+
+        if (nivelPoder === "BAIXO") {
+            poderBaixo = poderBaixo + 1;
+        } else if (nivelPoder === "MEDIO") {
+            poderMedio = poderMedio + 1;
+        } else if (nivelPoder === "ALTO") {
+            poderAlto = poderAlto + 1;
+        }
+
+        nomeHeroi = prompt("Digite o nome do herói da Marvel (ou 'sair' para encerrar)");
+    }
+
+    alert(
+        "Quantidade total de heróis cadastrados: " + quantidadeHerois +
+        "\nQuantidade de heróis com poder BAIXO: " + poderBaixo +
+        "\nQuantidade de heróis com poder MEDIO: " + poderMedio +
+        "\nQuantidade de heróis com poder ALTO: " + poderAlto
+    );
 }
 
 function exercicio38() {
+    // Solicitar o nome de séries geeks (ex: Star Wars, Star Trek, etc.) até o usuário digitar sair
+    // Para cada série cadastrada, solicitar uma nota de 0 a 10
+    // Calcular a média das notas das séries informadas
+    // Ao final, apresentar a quantidade de séries cadastradas e a média das notas
 
+    let nomeSerie = prompt("Digite o nome da série geek (ou 'sair' para encerrar)");
+    let quantidadeSeries = 0;
+    let somaNotas = 0;
+
+    while (nomeSerie !== "sair") {
+        quantidadeSeries = quantidadeSeries + 1;
+
+        let notaSerie = parseFloat(prompt("Digite a nota da série (0 a 10)"));
+        somaNotas = somaNotas + notaSerie;
+
+        nomeSerie = prompt("Digite o nome da série geek (ou 'sair' para encerrar)");
+    }
+
+    let mediaNotas = somaNotas / quantidadeSeries;
+
+    alert(
+        "Quantidade total de séries cadastradas: " + quantidadeSeries +
+        "\nMédia das notas: " + mediaNotas.toFixed(2)
+    );
 }
 
 function exercicio39() {
+    // Solicitar o nome de consoles/jogos retrô (ex: SNES, Mega Drive) até o usuário digitar sair
+    // Contar quantos itens foram cadastrados
+    // Solicitar para cada item se o usuário já jogou [SIM/NÃO]
+    // Ao final, apresentar quantos itens foram cadastrados e quantos o usuário já jogou
 
+    let nomeConsole = prompt("Digite o nome do console/jogo retrô (ou 'sair' para encerrar)");
+    let quantidadeItens = 0;
+    let jogou = 0;
+
+    while (nomeConsole !== "sair") {
+        quantidadeItens = quantidadeItens + 1;
+
+        let jaJogou = prompt("Você já jogou este console/jogo? (SIM/NÃO)");
+
+        if (jaJogou === "SIM") {
+            jogou = jogou + 1;
+        }
+
+        nomeConsole = prompt("Digite o nome do console/jogo retrô (ou 'sair' para encerrar)");
+    }
+
+    alert(
+        "Quantidade total de itens cadastrados: " + quantidadeItens +
+        "\nQuantidade de itens que você já jogou: " + jogou
+    );
 }
 
 function exercicio40() {
+    // Solicitar a distância percorrida em km e o consumo de combustível em litros
+    // Apresentar um MENU com as opções:
+    /// 1 - Calcular consumo médio (km/l)
+    /// 2 - Calcular custo da viagem (solicitar o preço do litro de combustível)
+    /// 3 - Alterar distância percorrida
+    /// 4 - Alterar consumo em litros
+    /// 10 - Sair
+    // Enquanto a opção digitada for diferente de 10
+    // Executar a opção escolhida e apresentar o resultado
+    // Ao escolher 10 encerrar o programa
 
+    let distancia = parseFloat(prompt("Digite a distância percorrida em km"));
+    let consumo = parseFloat(prompt("Digite o consumo de combustível em litros"));
+
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU:\n" +
+            "1 - Calcular consumo médio (km/l)\n" +
+            "2 - Calcular custo da viagem (solicitar o preço do litro de combustível)\n" +
+            "3 - Alterar distância percorrida\n" +
+            "4 - Alterar consumo em litros\n" +
+            "10 - Sair\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                alert("Consumo médio: " + (distancia / consumo).toFixed(2) + " km/l");
+                break;
+            case 2:
+                let precoLitro = parseFloat(prompt("Digite o preço do litro de combustível"));
+                alert("Custo da viagem: R$ " + (distancia / consumo * precoLitro).toFixed(2));
+                break;
+            case 3:
+                distancia = parseFloat(prompt("Digite a nova distância percorrida em km"));
+                break;
+            case 4:
+                consumo = parseFloat(prompt("Digite o novo consumo de combustível em litros"));
+                break;
+            case 10:
+                alert("Programa encerrado.");
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio41() {
+    // Solicitar o saldo inicial de uma conta bancária
+    // Apresentar um MENU com as opções:
+    /// 1 - Depositar
+    /// 2 - Sacar
+    /// 3 - Consultar saldo
+    /// 10 - Sair
+    // Enquanto a opção for diferente de 10
+    // Executar a operação escolhida
+    // No saque, não permitir sacar valor maior que o saldo
+    // Ao final, apresentar o saldo final da conta
 
+    let saldo = parseFloat(prompt("Digite o saldo inicial da conta bancária"));
+
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU:\n" +
+            "1 - Depositar\n" +
+            "2 - Sacar\n" +
+            "3 - Consultar saldo\n" +
+            "10 - Sair\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                let valorDeposito = parseFloat(prompt("Digite o valor a depositar"));
+                saldo = saldo + valorDeposito;
+                alert("Depósito realizado. Novo saldo: R$ " + saldo.toFixed(2));
+                break;
+            case 2:
+                let valorSaque = parseFloat(prompt("Digite o valor a sacar"));
+                if (valorSaque > saldo) {
+                    alert("Saldo insuficiente para saque.");
+                } else {
+                    saldo = saldo - valorSaque;
+                    alert("Saque realizado. Novo saldo: R$ " + saldo.toFixed(2));
+                }
+                break;
+            case 3:
+                alert("Saldo atual: R$ " + saldo.toFixed(2));
+                break;
+            case 10:
+                alert("Programa encerrado. Saldo final: R$ " + saldo.toFixed(2));
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }       
 }
 
 function exercicio42() {
+    // Apresentar um MENU de conversão de temperaturas:
+    /// 1 - Celsius para Fahrenheit
+    /// 2 - Fahrenheit para Celsius
+    /// 10 - Sair
+    // Enquanto a opção for diferente de 10
+    // Solicitar a temperatura conforme a opção
+    // Realizar a conversão e apresentar o resultado
+    // Voltar ao MENU até o usuário escolher sair
 
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU DE CONVERSÃO DE TEMPERATURAS:\n" +
+            "1 - Celsius para Fahrenheit\n" +
+            "2 - Fahrenheit para Celsius\n" +
+            "10 - Sair\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                let celsius = parseFloat(prompt("Digite a temperatura em Celsius"));
+                let fahrenheit = (celsius * 9/5) + 32;
+                alert(celsius.toFixed(2) + "°C é igual a " + fahrenheit.toFixed(2) + "°F");
+                break;
+            case 2:
+                let fahrenheitInput = parseFloat(prompt("Digite a temperatura em Fahrenheit"));
+                let celsiusConverted = (fahrenheitInput - 32) * 5/9;
+                alert(fahrenheitInput.toFixed(2) + "°F é igual a " + celsiusConverted.toFixed(2) + "°C");
+                break;
+            case 10:
+                alert("Programa encerrado.");
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio43() {
+    // Apresentar um MENU de calculadora de IMC:
+    /// 1 - Calcular IMC
+    /// 2 - Ver instruções de uso
+    /// 10 - Sair
+    // Enquanto a opção for diferente de 10
+    // Na opção 1 solicitar peso e altura, calcular e apresentar o IMC
+    // Na opção 2 apresentar uma breve explicação do que é IMC
+    // Voltar ao MENU até o usuário escolher sair
 
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU DE CALCULADORA DE IMC:\n" +
+            "1 - Calcular IMC\n" +
+            "2 - Ver instruções de uso\n" +
+            "10 - Sair\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                let peso = parseFloat(prompt("Digite o peso em kg"));
+                let altura = parseFloat(prompt("Digite a altura em metros"));
+                let imc = peso / (altura * altura);
+                alert("Seu IMC é: " + imc.toFixed(2));
+                break;
+            case 2:
+                alert("O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está com peso adequado em relação à sua altura. Ele é calculado dividindo o peso (em kg) pela altura (em metros) ao quadrado.");
+                break;
+            case 10:
+                alert("Programa encerrado.");
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio44() {
+    // Apresentar um MENU de controle de estoque:
+    /// 1 - Adicionar itens ao estoque
+    /// 2 - Remover itens do estoque
+    /// 3 - Consultar quantidade em estoque
+    /// 10 - Sair
+    // Declarar uma variável estoque iniciando em 0
+    // Enquanto a opção for diferente de 10
+    // Executar a opção escolhida atualizando o estoque
+    // Não permitir remover quantidade maior que o estoque
+    // Ao sair, apresentar a quantidade final em estoque
 
+    let estoque = 0;
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU DE CONTROLE DE ESTOQUE:\n" +
+            "1 - Adicionar itens ao estoque\n" +
+            "2 - Remover itens do estoque\n" +
+            "3 - Consultar quantidade em estoque\n" +
+            "10 - Sair\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                let quantidadeAdicionar = parseInt(prompt("Digite a quantidade de itens a adicionar ao estoque"));
+                estoque = estoque + quantidadeAdicionar;
+                alert("Itens adicionados. Estoque atual: " + estoque);
+                break;
+            case 2:
+                let quantidadeRemover = parseInt(prompt("Digite a quantidade de itens a remover do estoque"));
+                if (quantidadeRemover > estoque) {
+                    alert("Quantidade insuficiente em estoque para remoção.");
+                } else {
+                    estoque = estoque - quantidadeRemover;
+                    alert("Itens removidos. Estoque atual: " + estoque);
+                }
+                break;
+            case 3:
+                alert("Quantidade atual em estoque: " + estoque);
+                break;
+            case 10:
+                alert("Programa encerrado. Quantidade final em estoque: " + estoque);
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio45() {
+    // Apresentar um MENU de lanche:
+    /// 1 - Adicionar Hambúrguer (R$ 15,00)
+    /// 2 - Adicionar Pizza (R$ 25,00)
+    /// 3 - Adicionar Refrigerante (R$ 8,00)
+    /// 4 - Ver total parcial
+    /// 10 - Finalizar pedido
+    // Declarar uma variável total começando em 0
+    // Enquanto a opção for diferente de 10
+    // Somar o valor do item escolhido ao total
+    // Permitir consultar o total parcial
+    // Ao finalizar o pedido, apresentar o valor total
 
+    let total = 0;
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU DE LANCHE:\n" +
+            "1 - Adicionar Hambúrguer (R$ 15,00)\n" +
+            "2 - Adicionar Pizza (R$ 25,00)\n" +
+            "3 - Adicionar Refrigerante (R$ 8,00)\n" +
+            "4 - Ver total parcial\n" +
+            "10 - Finalizar pedido\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                total = total + 15;
+                alert("Hambúrguer adicionado. Total atual: R$ " + total.toFixed(2));
+                break;
+            case 2:
+                total = total + 25;
+                alert("Pizza adicionada. Total atual: R$ " + total.toFixed(2));
+                break;
+            case 3:
+                total = total + 8;
+                alert("Refrigerante adicionado. Total atual: R$ " + total.toFixed(2));
+                break;
+            case 4:
+                alert("Total parcial: R$ " + total.toFixed(2));
+                break;
+            case 10:
+                alert("Pedido finalizado. Valor total: R$ " + total.toFixed(2));
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio46() {
+    // Apresentar um MENU de notas de aluno:
+    /// 1 - Cadastrar nota
+    /// 2 - Ver média das notas
+    /// 3 - Ver quantidade de notas cadastradas
+    /// 10 - Sair
+    // Utilizar while para repetir o MENU
+    // Somar as notas cadastradas e contar quantas foram inseridas
+    // Na opção 2 calcular e apresentar a média
+    // Na opção 3 apresentar a quantidade de notas cadastradas
 
+    let somaNotas = 0;
+    let quantidadeNotas = 0;
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU DE NOTAS DE ALUNO:\n" +
+            "1 - Cadastrar nota\n" +
+            "2 - Ver média das notas\n" +
+            "3 - Ver quantidade de notas cadastradas\n" +
+            "10 - Sair\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                let nota = parseFloat(prompt("Digite a nota a ser cadastrada"));
+                somaNotas = somaNotas + nota;
+                quantidadeNotas = quantidadeNotas + 1;
+                alert("Nota cadastrada.");
+                break;
+            case 2:
+                if (quantidadeNotas === 0) {
+                    alert("Nenhuma nota cadastrada.");
+                } else {
+                    let media = somaNotas / quantidadeNotas;
+                    alert("Média das notas: " + media.toFixed(2));
+                }
+                break;
+            case 3:
+                alert("Quantidade de notas cadastradas: " + quantidadeNotas);
+                break;
+            case 10:
+                alert("Programa encerrado.");
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio47() {
+    // Apresentar um MENU de pesquisa de satisfação:
+    /// 1 - Registrar resposta "Ruim"
+    /// 2 - Registrar resposta "Regular"
+    /// 3 - Registrar resposta "Bom"
+    /// 4 - Ver resumo da pesquisa
+    /// 10 - Encerrar pesquisa
+    // Utilizar contadores para cada tipo de resposta
+    // Enquanto a opção for diferente de 10
+    // Registrar a opção escolhida
+    // Na opção 4 apresentar a quantidade de respostas Ruim, Regular e Bom
+    // Ao encerrar, mostrar o resumo final da pesquisa
 
+    let ruim = 0;
+    let regular = 0;
+    let bom = 0;
+    let opcao = 0;
+    while (opcao !== 10) {
+        opcao = parseInt(prompt(
+            "MENU DE PESQUISA DE SATISFAÇÃO:\n" +
+            "1 - Registrar resposta 'Ruim'\n" +
+            "2 - Registrar resposta 'Regular'\n" +
+            "3 - Registrar resposta 'Bom'\n" +
+            "4 - Ver resumo da pesquisa\n" +
+            "10 - Encerrar pesquisa\n" +
+            "Digite a opção desejada:"
+        ));
+
+        switch (opcao) {
+            case 1:
+                ruim = ruim + 1;
+                alert("Resposta 'Ruim' registrada.");
+                break;
+            case 2:
+                regular = regular + 1;
+                alert("Resposta 'Regular' registrada.");
+                break;
+            case 3:
+                bom = bom + 1;
+                alert("Resposta 'Bom' registrada.");
+                break;
+            case 4:
+                alert(
+                    "Resumo da pesquisa:\n" +
+                    "Respostas Ruim: " + ruim + "\n" +
+                    "Respostas Regular: " + regular + "\n" +
+                    "Respostas Bom: " + bom
+                );
+                break;
+            case 10:
+                alert(
+                    "Pesquisa encerrada. Resumo final:\n" +
+                    "Respostas Ruim: " + ruim + "\n" +
+                    "Respostas Regular: " + regular + "\n" +
+                    "Respostas Bom: " + bom
+                );
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    }
 }
 
 function exercicio48() {
+    // Cadastrar quantas vendas desejar
+    // Para cada venda solicitar:
+    /// Nome do cliente
+    /// Valor da compra
+    /// Forma de pagamento [CRÉDITO/DÉBITO/PIX]
+    // Calcular o maior valor de compra
+    // Calcular o menor valor de compra
+    // Calcular a média das compras
+    // Contar quantas vendas foram em CRÉDITO, DÉBITO e PIX
+    // Apresentar um resumo geral das vendas
 
+    let maiorValor = 0;
+    let menorValor = Infinity;
+    let somaValores = 0;
+    let quantidadeVendas = 0;
+    let credito = 0;
+    let debito = 0;
+    let pix = 0;
+
+    let continuar = true;
+    while (continuar) {
+        let nomeCliente = prompt("Digite o nome do cliente (ou 'sair' para encerrar)");
+        if (nomeCliente.toLowerCase() === 'sair') {
+            continuar = false;
+            break;
+        }
+
+        let valorCompra = parseFloat(prompt("Digite o valor da compra"));
+        let formaPagamento = prompt("Digite a forma de pagamento (CRÉDITO/DÉBITO/PIX)");
+
+        if (valorCompra > maiorValor) {
+            maiorValor = valorCompra;
+        }
+        if (valorCompra < menorValor) {
+            menorValor = valorCompra;
+        }
+
+        somaValores += valorCompra;
+        quantidadeVendas += 1;
+
+        if (formaPagamento === "CRÉDITO") {
+            credito += 1;
+        } else if (formaPagamento === "DÉBITO") {
+            debito += 1;
+        } else if (formaPagamento === "PIX") {
+            pix += 1;
+        }
+    }
+
+    let mediaCompras = quantidadeVendas > 0 ? (somaValores / quantidadeVendas) : 0;
+
+    alert(
+        "Resumo geral das vendas:\n" +
+        "Maior valor de compra: R$ " + maiorValor.toFixed(2) + "\n" +
+        "Menor valor de compra: R$ " + menorValor.toFixed(2) + "\n" +
+        "Média das compras: R$ " + mediaCompras.toFixed(2) + "\n" +
+        "Vendas em CRÉDITO: " + credito + "\n" +
+        "Vendas em DÉBITO: " + debito + "\n" +
+        "Vendas em PIX: " + pix
+    );
 }
 
 function exercicio49() {
+// Cadastrar quantos alunos desejar
+// Para cada aluno solicitar:
+/// Nome
+/// Idade
+/// Peso
+/// Altura
+// Calcular o IMC de cada aluno
+// Contar quantos alunos estão Abaixo do peso, Peso normal e Acima do peso
+// Descobrir qual aluno tem o maior IMC
+// Descobrir qual aluno tem o menor IMC
+// Calcular a média das idades
+// Apresentar um resumo geral dos alunos
 
+    let abaixoPeso = 0;
+    let pesoNormal = 0;
+    let acimaPeso = 0;
+    let maiorIMC = 0;
+    let menorIMC = Infinity;
+    let nomeMaiorIMC = "";
+    let nomeMenorIMC = "";
+    let somaIdades = 0;
+    let quantidadeAlunos = 0;
+
+    let continuar = true;
+    while (continuar) {
+        let nomeAluno = prompt("Digite o nome do aluno (ou 'sair' para encerrar)");
+        if (nomeAluno.toLowerCase() === 'sair') {
+            continuar = false;
+            break;
+        }
+
+        let idade = parseInt(prompt("Digite a idade do aluno"));
+        let peso = parseFloat(prompt("Digite o peso do aluno em kg"));
+        let altura = parseFloat(prompt("Digite a altura do aluno em metros"));
+
+        let imc = peso / (altura * altura);
+
+        if (imc < 18.5) {
+            abaixoPeso += 1;
+        } else if (imc >= 18.5 && imc < 24.9) {
+            pesoNormal += 1;
+        } else {
+            acimaPeso += 1;
+        }
+
+        if (imc > maiorIMC) {
+            maiorIMC = imc;
+            nomeMaiorIMC = nomeAluno;
+        }
+        if (imc < menorIMC) {
+            menorIMC = imc;
+            nomeMenorIMC = nomeAluno;
+        }
+
+        somaIdades += idade;
+        quantidadeAlunos += 1;
+    }
+
+    let mediaIdades = quantidadeAlunos > 0 ? (somaIdades / quantidadeAlunos) : 0;
+
+    alert(
+        "Resumo geral dos alunos:\n" +
+        "Alunos Abaixo do peso: " + abaixoPeso + "\n" +
+        "Alunos com Peso normal: " + pesoNormal + "\n" +
+        "Alunos Acima do peso: " + acimaPeso + "\n" +
+        "Aluno com maior IMC: " + nomeMaiorIMC + " (IMC: " + maiorIMC.toFixed(2) + ")\n" +
+        "Aluno com menor IMC: " + nomeMenorIMC + " (IMC: " + menorIMC.toFixed(2) + ")\n" +
+        "Média das idades: " + mediaIdades.toFixed(2)
+    );
 }
 
 function exercicio50() {
+    // Cadastrar quantos títulos desejar em uma maratona geek
+    // Para cada título solicitar:
+    /// Nome do título
+    /// Tipo [FILME/SÉRIE/ANIME]
+    /// Nota (0 a 10)
+    // Calcular a maior nota atribuída
+    // Calcular a menor nota atribuída
+    // Calcular a média das notas
+    // Contar quantos são FILME, quantos são SÉRIE e quantos são ANIME
+    // Apresentar um resumo geral da maratona
 
+    let maiorNota = 0;
+    let menorNota = Infinity;
+    let somaNotas = 0;
+    let quantidadeTitulos = 0;
+    let filmes = 0;
+    let series = 0;
+    let animes = 0;
+
+    let continuar = true;
+    while (continuar) {
+        let nomeTitulo = prompt("Digite o nome do título (ou 'sair' para encerrar)");
+        if (nomeTitulo.toLowerCase() === 'sair') {
+            continuar = false;
+            break;
+        }
+
+        let tipoTitulo = prompt("Digite o tipo do título (FILME/SÉRIE/ANIME)");
+        let notaTitulo = parseFloat(prompt("Digite a nota do título (0 a 10)"));
+
+        if (notaTitulo > maiorNota) {
+            maiorNota = notaTitulo;
+        }
+        if (notaTitulo < menorNota) {
+            menorNota = notaTitulo;
+        }
+
+        somaNotas += notaTitulo;
+        quantidadeTitulos += 1;
+
+        if (tipoTitulo === "FILME") {
+            filmes += 1;
+        } else if (tipoTitulo === "SÉRIE") {
+            series += 1;
+        } else if (tipoTitulo === "ANIME") {
+            animes += 1;
+        }
+    }
+
+    let mediaNotas = quantidadeTitulos > 0 ? (somaNotas / quantidadeTitulos) : 0;
+
+    alert(
+        "Resumo geral da maratona geek:\n" +
+        "Maior nota atribuída: " + maiorNota.toFixed(2) + "\n" +
+        "Menor nota atribuída: " + menorNota.toFixed(2) + "\n" +
+        "Média das notas: " + mediaNotas.toFixed(2) + "\n" +
+        "Quantidade de FILMES: " + filmes + "\n" +
+        "Quantidade de SÉRIES: " + series + "\n" +
+        "Quantidade de ANIMES: " + animes
+    );
 }
